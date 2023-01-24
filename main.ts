@@ -2,7 +2,6 @@ import { Plugin, MarkdownRenderer } from 'obsidian';
 
 export default class SpoilerBlock extends Plugin {
   async onload() {
-    console.log("reload");
     this.registerMarkdownCodeBlockProcessor("spoiler-block", (source, el, _) => {
       const container = el.createEl("div");
       container.className = "spoiler";
